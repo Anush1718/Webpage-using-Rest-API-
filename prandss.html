@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Periya list of my frnds..lol</h1>
+        <br/>
+        <form action="/prandss" METHOD="POST">
+            <input type="text" placeholder="Name" name="name">
+            <input type="submit" value="Add Name" class="btn btn-secondary">
+        </form>
+        <br/><br/>
+        <h3>{{ friend_name }}</h3> <!-- Display the entered name here -->
+        {% for friend in prandss %}
+            <h3>
+                {{ friend.name }}
+            </h3>
+        {% endfor %}
+    </div>
+{% endblock %}

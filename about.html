@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}ENA PATHI THERINJIKONGA{% endblock %}
+
+{% block content %}
+
+
+      <div class="container">
+    <h1>About myself</h1>
+    <ul>
+
+    <p>
+        {% for name in names %}
+
+         {% if name == 'Anush' %}
+          <li>Anush is a man</li>
+          {% else %}
+           <li>{{ name }}</li>
+          {% endif %}
+
+
+        {% endfor %}
+    </ul>
+          
+    </p>
+    </div>
+ {% endblock %}
